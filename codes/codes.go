@@ -146,6 +146,9 @@ const (
 	// authentication credentials for the operation.
 	Unauthenticated Code = 16
 
+	//自定义错误
+	CustomError Code = 21
+
 	_maxCode = 17
 )
 
@@ -167,6 +170,7 @@ var strToCode = map[string]Code{
 	`"UNAVAILABLE"`:         Unavailable,
 	`"DATA_LOSS"`:           DataLoss,
 	`"UNAUTHENTICATED"`:     Unauthenticated,
+	`"CUSTOMERROR"`:         CustomError,
 }
 
 // UnmarshalJSON unmarshals b into the Code.
